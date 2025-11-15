@@ -1,43 +1,39 @@
-/* -----------------------------------------
-  Have focus outline only for keyboard users 
- ---------------------------------------- */
+// Mobile nav toggle
+const navToggle = document.getElementById("navToggle");
+const navLinks = document.querySelector(".nav-links");
 
-const handleFirstTab = (e) => {
-  if(e.key === 'Tab') {
-    document.body.classList.add('user-is-tabbing')
-
-    window.removeEventListener('keydown', handleFirstTab)
-    window.addEventListener('mousedown', handleMouseDownOnce)
-  }
-
+if (navToggle && navLinks) {
+  navToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
 }
 
-const handleMouseDownOnce = () => {
-  document.body.classList.remove('user-is-tabbing')
+// Scroll reveal
+function handleReveal() {
+  const elements = document.querySelectorAll(".reveal");
+  const windowHeight = window.innerHeight;
 
-  window.removeEventListener('mousedown', handleMouseDownOnce)
-  window.addEventListener('keydown', handleFirstTab)
+  elements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < windowHeight - 120) {
+      el.classList.add("active");
+    }
+  });
 }
 
-window.addEventListener('keydown', handleFirstTab)
+window.addEventListener("scroll", handleReveal);
+window.addEventListener("load", handleReveal);
 
-const backToTopButton = document.querySelector(".back-to-top");
-let isBackToTopRendered = false;
+// Simple parallax for hero background layers
+document.addEventListener("mousemove", (e) => {
+  const layers = document.querySelectorAll(".parallax-layer");
+  const cx = window.innerWidth / 2;
+  const cy = window.innerHeight / 2;
 
-let alterStyles = (isBackToTopRendered) => {
-  backToTopButton.style.visibility = isBackToTopRendered ? "visible" : "hidden";
-  backToTopButton.style.opacity = isBackToTopRendered ? 1 : 0;
-  backToTopButton.style.transform = isBackToTopRendered
-    ? "scale(1)"
-    : "scale(0)";
-};
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 700) {
-    isBackToTopRendered = true;
-    alterStyles(isBackToTopRendered);
-  } else {
-    isBackToTopRendered = false;
-    alterStyles(isBackToTopRendered);
-  }
+  layers.forEach((layer, idx) => {
+    const speed = (idx + 1) * 0.01;
+    const x = (cx - e.clientX) * speed;
+    const y = (cy - e.clientY) * speed;
+    layer.style.transform = `translate(${x}px, ${y}px)`;
+  });
 });

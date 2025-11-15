@@ -1,262 +1,277 @@
-
-
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="hu">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
-
-  <!-- Put your site title here -->
-  <title>
-    Rácz Dániel | A Web Developer based in Budapest,Hungary.
-  </title>
-
-  <meta name="description" content="Add small description of yourslef.">
-  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
-  <meta name="keywords" content="Put your name, skills and some coding keywords" />
-  <link rel="stylesheet" href="index.css" />
+  <title>Rácz Dániel – Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <!-- Pixel grid háttér -->
+  <div class="pixel-grid"></div>
 
-  <!-- ***** Header ***** -->
-
-  <header class="header" role="banner" id="top">
-    <div class="row">
-      <nav class="nav" role="navigation">
-        <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-          <li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="header__text-box row">
-      <div class="header__text">
-        <h1 class="heading-primary">
-          <!-- Replace the following name with your name -->
-          <span>Rácz Dániel</span>
-        </h1>
-        <!-- Put a small paragraph about yourself -->
-        <p>A Web Developer based in Lahore, Pakistan.</p>
-        <a href="#contact" class="btn btn--pink">Get in touch</a>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="#hero">Rácz Dániel</a>
       </div>
+      <nav class="nav-links">
+        <a href="#hero">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#resume" class="resume-btn">Resume</a>
+      </nav>
+      <div class="nav-toggle" id="navToggle">☰</div>
     </div>
   </header>
 
-  <main role="main">
-
-    <!-- ***** Work ***** -->
-
-    <section class="work" id="work">
-      <div class="row">
-        <h2>My Work</h2>
-        <div class="work__boxes">
-
-          <!-- Each div with the work__box class is a project. -->
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Portfolio Template</h3>
-              <p>
-                A free Open Source Portfolio for anyone to use for free.
-              </p>
-              <ul class="work__list">
-                <li>HTML</li>
-                <li>SCSS</li>
-                <li>JavaScript</li>
-                <li>Parcel</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="https://nisar.surge.sh" target="_blank" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="https://github.com/nisarhassan12/portfolio" title="View Source Code" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-1.png" class="work__image" alt="Project 1" />
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Calculator</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
-              </p>
-              <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-2.png" class="work__image" alt="Project 1" />
-            </div>
-          </div>
-
-          <div class="work__box">
-            <div class="work__text">
-              <h3>Notificator</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
-                eius.
-              </p>
-              <ul class="work__list">
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Node</li>
-                <li>MongoDB</li>
-              </ul>
-
-              <div class="work__links">
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            <div class="work__image-box">
-              <img src="./images/project-3.png" class="work__image" alt="Project 3" />
-            </div>
-          </div>
-        </div>
+  <!-- HERO -->
+  <section id="hero" class="hero reveal">
+    <div class="hero-inner">
+      <h1 class="hero-title">Rácz Dániel</h1>
+      <h2 class="hero-subtitle">
+        Computer Engineering Student<br />
+        <span class="accent">BME VIK – Software Development / AI</span>
+      </h2>
+      <p class="hero-tagline">NLP · Backend · AI-driven systems · Clean Architecture</p>
+      <div class="hero-actions">
+        <a href="#contact" class="cta-btn">Get in touch →</a>
+        <a href="#projects" class="ghost-btn">View projects</a>
       </div>
-    </section>
+    </div>
+    <!-- Parallax rétegek -->
+    <div class="parallax-layer layer1"></div>
+    <div class="parallax-layer layer2"></div>
+  </section>
 
-    <!-- ***** Clients ***** -->
-
-    <section class="client" id="clients">
-      <div class="row">
-        <h2>Clients</h2>
-        <div class="client__logos">
-          <!-- Add logos of the clients or companies you'have worked with. -->
-          <img src="./images/ronjones.png" class="client__logo" alt="Company 2" />
-          <img src="./images/goldengrid.png" class="client__logo" alt="Company 3" />
-          <img src="./images/bullseye.png" class="client__logo" alt="Company 1" />
-          <img src="./images/mighty-furnitures.png" class="client__logo" alt="Company 1" />
-          <img src="./images/fastlane.png" class="client__logo" alt="Company 3" />
-          <img src="./images/chippy.png" class="client__logo" alt="Company 1" />
-        </div>
-      </div>
-    </section>
-
-    <!-- ***** About ***** -->
-
-    <section class="about" id="about">
-      <div class="row">
-        <h2>About Me</h2>
-        <div class="about__content">
-          <div class="about__text">
-            <!-- Replace the below paragraph with info about yourself -->
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos id
-              nostrum illo harum blanditiis, tenetur eum suscipit cupiditate
-              in vel, ex quam quidem quos mollitia labore aut sunt eius
-              ratione molestiae fuga veniam facere similique voluptate.
-            </p>
-            <!-- Provide a link to your resume -->
-            <a href="#" class="btn">My Resume</a>
-          </div>
-
-          <div class="about__photo-container">
-            <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/syed-ali-hussnain.jpg" alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ***** Contact ***** -->
-
-  <section class="contact" id="contact">
-    <div class="row">
-      <h2>Get in Touch</h2>
-      <div class="contact__info">
-        <p>
-          Are you looking for a fast-performing and user-friendly website to
-          represent your product or business? or looking for any kind of
-          consultation? or want to ask questions? or have some advice for me
-          or just want to say "Hi 👋" in any case feel free to Let me know. I
-          will do my best to respond back. 😊 The quickest way to reach out to
-          me is via an email.
-        </p>
-        <!-- Replace the email with yours -->
-        <a href="mailto:you@example.com" class="btn">you@example.com</a>
+  <!-- ABOUT -->
+  <section id="about" class="about-header reveal">
+    <div class="about-img-wrapper">
+      <img src="images/profile.png"
+           alt="Profile"
+           class="profile-img"
+           onerror="this.src='images/profile_placeholder.png';" />
+    </div>
+    <div class="about-text">
+      <h1>About Me</h1>
+      <p>
+        I’m a Computer Engineering student at BME VIK with a strong focus on software development,
+        NLP and AI-based systems. I enjoy designing and building structured backends, working with
+        graphs and world models, and taking part in community-organised tech events.
+      </p>
+      <p>
+        Beyond university projects I help organise events such as the Schönherz Meetup,
+        connect companies and students, and constantly explore new technologies like LLMs
+        and 3D printing.
+      </p>
+      <div class="social-icons">
+        <a href="mailto:YOUR_EMAIL"><img src="images/icons/gmail.svg" alt="Gmail" /></a>
+        <a href="https://github.com/YOUR_GITHUB" target="_blank">
+          <img src="images/icons/github.svg" alt="GitHub" />
+        </a>
+        <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">
+          <img src="images/icons/linkedin.svg" alt="LinkedIn" />
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ***** Footer ***** -->
+  <!-- TIMELINE -->
+  <section class="timeline-section reveal">
+    <h2>Education & Experience</h2>
+    <div class="timeline-container">
+      <div class="timeline-item left">
+        <h3>2021 – C1 Angol LCCI nyelvvizsga</h3>
+        <p>Advanced English certificate, strong written and spoken communication.</p>
+      </div>
+      <div class="timeline-dot"></div>
 
-  <footer role="contentinfo" class="footer">
-    <div class="row">
-      <!-- Update the links to point to your accounts -->
-      <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a href="https://twitter.com/nisarhassan12/" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://github.com/nisarhassan12/" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://codepen.io/nisar_hassan" title="Link to Codepen Profile">
-            <img src="./images/codepen.svg" class="footer__social-image" alt="Codepen">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href=https://www.linkedin.com/in/nisar-hassan-naqvi-413466199/">
-            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
-          </a>
-        </li>
-      </ul>
+      <div class="timeline-item right">
+        <h3>2023 május – Érettségi</h3>
+        <p>Karinthy Frigyes Gimnázium</p>
+      </div>
+      <div class="timeline-dot"></div>
 
-      <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
-      <p>
-        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
-      </p>
-      <div class="footer__github-buttons">
-        <iframe
-          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
-          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
-        </iframe>
+      <div class="timeline-item left">
+        <h3>2023 szept. → BME VIK – Mérnökinformatikus BSc</h3>
+        <p>Software Development track with focus on Artificial Intelligence.</p>
+      </div>
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-item right">
+        <h3>2025 márc. – Schönherz Vállalati Kapcsolatok</h3>
+        <p>Account Manager – coordinating partners, sponsorships and collaborations.</p>
+      </div>
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-item left">
+        <h3>2025 aug–okt – Schönherz Meetup főszervező</h3>
+        <p>Organising a large-scale tech meetup with speakers, sponsors and student teams.</p>
+      </div>
+      <div class="timeline-dot"></div>
+
+      <div class="timeline-item right">
+        <h3>2025 szept. – Szoftverfejlesztés specializáció</h3>
+        <p>Artificial Intelligence department – software engineering focus.</p>
       </div>
     </div>
+  </section>
+
+  <!-- TECH -->
+  <section class="tech-section reveal">
+    <h2>Technologies & Skills</h2>
+    <div class="tech-grid">
+      <div class="tech-card" data-tooltip="Low-level systems programming, memory control">
+        <img src="images/icons/c.svg" alt="C" />
+        <span>C</span>
+      </div>
+      <div class="tech-card" data-tooltip="High-performance compiled language, OOP & systems programming">
+        <img src="images/icons/cpp.svg" alt="C++" />
+        <span>C++</span>
+      </div>
+      <div class="tech-card" data-tooltip="Java OOP, backend, larger systems">
+        <img src="images/icons/java.svg" alt="Java" />
+        <span>Java</span>
+      </div>
+      <div class="tech-card" data-tooltip="Kotlin for Android and modern backend">
+        <img src="images/icons/kotlin.svg" alt="Kotlin" />
+        <span>Kotlin</span>
+      </div>
+      <div class="tech-card" data-tooltip="Python for NLP, AI, backend and scripting">
+        <img src="images/icons/python.svg" alt="Python" />
+        <span>Python</span>
+      </div>
+      <div class="tech-card" data-tooltip="Version control and collaboration">
+        <img src="images/icons/git.svg" alt="Git" />
+        <span>Git</span>
+      </div>
+      <div class="tech-card" data-tooltip="Team communication">
+        <img src="images/icons/slack.svg" alt="Slack" />
+        <span>Slack</span>
+      </div>
+      <div class="tech-card" data-tooltip="Project management & task tracking">
+        <img src="images/icons/clickup.svg" alt="ClickUp" />
+        <span>ClickUp</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOBBIES -->
+  <section class="hobby-section reveal">
+    <h2>Hobbies</h2>
+    <div class="hobby-grid">
+      <div class="hobby-card">📷 Fotózás</div>
+      <div class="hobby-card">🤖 Új technológiák (LLM, 3D nyomtatás)</div>
+      <div class="hobby-card">🥋 Karate</div>
+      <div class="hobby-card">🍳 Főzés & közösségi programok</div>
+      <div class="hobby-card">📺 Sorozatok nézése</div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects-section reveal">
+    <h2>Projects</h2>
+    <p class="projects-intro">
+      A few projects I’m proud of – focusing on NLP, backend engineering and real-world student initiatives.
+    </p>
+    <div class="projects-grid">
+      <!-- PROJECT 1 -->
+      <div class="project-card">
+        <div class="project-thumb">
+          <img src="images/projects/worldgraph.png" alt="NLP WorldGraph Generator" />
+        </div>
+        <h3>NLP WorldGraph Generator</h3>
+        <p>
+          A Clean Architecture based pipeline that extracts entities, relations and world graphs from books,
+          and prepares structured input for AI story generation.
+        </p>
+        <div class="project-tech">
+          <img src="images/icons/python.svg" alt="Python" />
+          <img src="images/icons/git.svg" alt="Git" />
+        </div>
+        <div class="project-actions">
+          <a href="https://github.com/YOUR_GITHUB/YOUR_REPO" target="_blank" class="project-btn">GitHub</a>
+        </div>
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div class="project-card">
+        <div class="project-thumb">
+          <img src="images/projects/ai-story.png" alt="AI Story Generator UI" />
+        </div>
+        <h3>AI Story Generator UI</h3>
+        <p>
+          A simple but powerful UI to upload texts, run the extraction pipeline and generate new stories
+          using an AI model and the prepared WorldGraph.
+        </p>
+        <div class="project-tech">
+          <img src="images/icons/python.svg" alt="Python" />
+          <img src="images/icons/java.svg" alt="Java" />
+        </div>
+        <div class="project-actions">
+          <a href="https://github.com/YOUR_GITHUB/YOUR_REPO" target="_blank" class="project-btn">GitHub</a>
+        </div>
+      </div>
+
+      <!-- PROJECT 3 -->
+      <div class="project-card">
+        <div class="project-thumb">
+          <img src="images/projects/svk.png" alt="Schönherz Meetup" />
+        </div>
+        <h3>Schönherz Meetup Organizer</h3>
+        <p>
+          Workflow and tooling around organising the Schönherz Meetup: speaker & sponsor tracking,
+          communication and documentation.
+        </p>
+        <div class="project-tech">
+          <img src="images/icons/cpp.svg" alt="C++" />
+          <img src="images/icons/c.svg" alt="C" />
+        </div>
+        <div class="project-actions">
+          <a href="#" class="project-btn disabled">Internal project</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section reveal">
+    <h2>Contact</h2>
+    <p>If you’d like to collaborate, ask about a project, or just say hi, feel free to reach out.</p>
+    <div class="contact-card">
+      <div class="contact-item">
+        <img src="images/icons/gmail.svg" alt="Gmail" />
+        <a href="mailto:YOUR_EMAIL">YOUR_EMAIL</a>
+      </div>
+      <div class="contact-item">
+        <img src="images/icons/linkedin.svg" alt="LinkedIn" />
+        <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
+      </div>
+      <div class="contact-item">
+        <img src="images/icons/github.svg" alt="GitHub" />
+        <a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub</a>
+      </div>
+    </div>
+    <a href="mailto:YOUR_EMAIL" class="contact-cta">Send me a message →</a>
+  </section>
+
+  <!-- RESUME -->
+  <section id="resume" class="resume-section reveal">
+    <h2>Resume</h2>
+    <p>You can download or preview my latest CV here.</p>
+    <a class="resume-download" href="resume/resume.pdf" download>Download CV (PDF) ↓</a>
+    <div class="resume-frame">
+      <iframe src="resume/resume.pdf" title="Resume preview"></iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Rácz Dániel. Built with ❤️ and a lot of coffee.</p>
   </footer>
 
-  <a href="#top" class="back-to-top" title="Back to Top">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
-  </a>
-  <script src="./index.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
