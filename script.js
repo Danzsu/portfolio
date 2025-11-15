@@ -1,31 +1,48 @@
-// SCROLL REVEAL
+/* -------------------------------------------------------
+   SCROLL REVEAL ANIMATION
+-------------------------------------------------------- */
 function revealOnScroll() {
-    document.querySelectorAll('.reveal').forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 60) {
-            el.classList.add('active');
+    const reveals = document.querySelectorAll(".reveal");
+
+    for (let r of reveals) {
+        const windowHeight = window.innerHeight;
+        const elementTop = r.getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - 120) {
+            r.classList.add("active");
         }
-    });
+    }
 }
-window.addEventListener('scroll', revealOnScroll);
-revealOnScroll();
+
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
 
 
-// THEME TOGGLE
-const toggleBtn = document.getElementById('themeToggle');
-let isDark = true;
+/* -------------------------------------------------------
+   PROFILE IMAGE FALLBACK
+-------------------------------------------------------- */
+const profileImg = document.getElementById("profileImage");
 
-toggleBtn.onclick = () => {
-    isDark = !isDark;
-    document.body.classList.toggle("light");
-    toggleBtn.textContent = isDark ? "🌙" : "☀️";
-};
+if (profileImg) {
+    profileImg.src = "profile.png";
+
+    profileImg.onerror = () => {
+        profileImg.src =
+            "https://cdn-icons-png.flaticon.com/512/149/149071.png"; // placeholder
+    };
+}
 
 
-// PROFILE IMAGE WITH FALLBACK
-const img = document.getElementById("profileImage");
-img.src = "profile.png";
+/* -------------------------------------------------------
+   SMOOTH SCROLL FOR NAV LINKS
+-------------------------------------------------------- */
 
-img.onerror = () => {
-    img.src = "https://cdn-icons-png.flaticon.com/512/149/149071.png"; // placeholder
-};
+document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
+    link.addEventListener("click", e => {
+        e.preventDefault();
+        const targetId = link.getAttribute("href");
+        document.querySelector(targetId).scrollIntoView({
+            behavior: "smooth"
+        });
+    });
+});
