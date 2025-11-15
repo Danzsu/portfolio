@@ -1,48 +1,43 @@
-/* -------------------------------------------------------
-   SCROLL REVEAL ANIMATION
--------------------------------------------------------- */
-function revealOnScroll() {
-    const reveals = document.querySelectorAll(".reveal");
+/* -----------------------------------------
+  Have focus outline only for keyboard users 
+ ---------------------------------------- */
 
-    for (let r of reveals) {
-        const windowHeight = window.innerHeight;
-        const elementTop = r.getBoundingClientRect().top;
+const handleFirstTab = (e) => {
+  if(e.key === 'Tab') {
+    document.body.classList.add('user-is-tabbing')
 
-        if (elementTop < windowHeight - 120) {
-            r.classList.add("active");
-        }
-    }
+    window.removeEventListener('keydown', handleFirstTab)
+    window.addEventListener('mousedown', handleMouseDownOnce)
+  }
+
 }
 
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
+const handleMouseDownOnce = () => {
+  document.body.classList.remove('user-is-tabbing')
 
-
-/* -------------------------------------------------------
-   PROFILE IMAGE FALLBACK
--------------------------------------------------------- */
-const profileImg = document.getElementById("profileImage");
-
-if (profileImg) {
-    profileImg.src = "profile.png";
-
-    profileImg.onerror = () => {
-        profileImg.src =
-            "https://cdn-icons-png.flaticon.com/512/149/149071.png"; // placeholder
-    };
+  window.removeEventListener('mousedown', handleMouseDownOnce)
+  window.addEventListener('keydown', handleFirstTab)
 }
 
+window.addEventListener('keydown', handleFirstTab)
 
-/* -------------------------------------------------------
-   SMOOTH SCROLL FOR NAV LINKS
--------------------------------------------------------- */
+const backToTopButton = document.querySelector(".back-to-top");
+let isBackToTopRendered = false;
 
-document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
-    link.addEventListener("click", e => {
-        e.preventDefault();
-        const targetId = link.getAttribute("href");
-        document.querySelector(targetId).scrollIntoView({
-            behavior: "smooth"
-        });
-    });
+let alterStyles = (isBackToTopRendered) => {
+  backToTopButton.style.visibility = isBackToTopRendered ? "visible" : "hidden";
+  backToTopButton.style.opacity = isBackToTopRendered ? 1 : 0;
+  backToTopButton.style.transform = isBackToTopRendered
+    ? "scale(1)"
+    : "scale(0)";
+};
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 700) {
+    isBackToTopRendered = true;
+    alterStyles(isBackToTopRendered);
+  } else {
+    isBackToTopRendered = false;
+    alterStyles(isBackToTopRendered);
+  }
 });
