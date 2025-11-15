@@ -1,0 +1,145 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap');
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Jost',sans-serif;
+    background:#050506;
+    color:#f5f5f5;
+    overflow-x:hidden;
+}
+
+/* Pixel-grid */
+.pixel-grid{
+    position:fixed;
+    inset:0;
+    background-image:
+        linear-gradient(90deg, rgba(255,50,88,0.12) 1px, transparent 1px),
+        linear-gradient(rgba(255,50,88,0.12) 1px, transparent 1px);
+    background-size:26px 26px;
+    opacity:0.18;
+    pointer-events:none;
+    z-index:-1;
+}
+
+/* NAVBAR */
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:70px;
+    background:rgba(3,3,4,0.82);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(255,50,88,0.15);
+    z-index:50;
+}
+
+.nav-container{
+    max-width:1080px;
+    margin:auto;
+    height:100%;
+    padding:0 1.5rem;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.nav-logo a{
+    color:#fff;
+    font-family:'Sora';
+    font-size:1.25rem;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.nav-links{
+    display:flex;
+    gap:1.8rem;
+}
+
+.nav-links a{
+    color:#d9d9d9;
+    text-decoration:none;
+    position:relative;
+    transition:0.25s;
+}
+
+.nav-links a:hover{
+    color:#ff3258;
+}
+
+.resume-btn{
+    border:1px solid #ff3258;
+    padding:0.35rem 0.9rem;
+    border-radius:999px;
+}
+
+.resume-btn.active{
+    background:#ff3258;
+    color:#050506;
+}
+
+/* CONTENT */
+.resume-section{
+    max-width:1080px;
+    margin:120px auto 80px;
+    padding:0 1.5rem;
+}
+
+.resume-section h1{
+    font-family:'Sora';
+    font-size:2.4rem;
+    margin-bottom:0.6rem;
+}
+
+.resume-section p{
+    font-size:1rem;
+    color:#cfcfcf;
+    margin-bottom:1.4rem;
+}
+
+/* BUTTON */
+.download-btn{
+    display:inline-block;
+    padding:0.7rem 1.4rem;
+    border-radius:999px;
+    border:2px solid #ff3258;
+    color:#ff3258;
+    text-decoration:none;
+    font-size:0.95rem;
+    margin-bottom:1.4rem;
+    transition:0.3s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+.download-btn:hover{
+    background:#ff3258;
+    color:#050506;
+}
+
+/* IFRAME */
+.resume-frame {
+    width: 100%;
+    height: 90vh;              /* magasabb lett */
+    max-width: 1200px;         /* szélesebb lett, hogy elférjen az A4 */
+    margin: 0 auto;            /* középre igazítás */
+    border-radius: 14px;
+    border: 1px solid rgba(255,50,88,0.28);
+    overflow: hidden;
+    box-shadow: 0 0 28px rgba(255,50,88,0.35);
+    background: #0c0c0e;       /* háttér a szélekhez */
+    padding: 0;
+}
+
+.resume-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}

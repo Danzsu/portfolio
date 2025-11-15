@@ -37,3 +37,21 @@ document.addEventListener("mousemove", (e) => {
     layer.style.transform = `translate(${x}px, ${y}px)`;
   });
 });
+
+// Scroll to top button
+const toTopBtn = document.getElementById("toTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (!toTopBtn) return;
+  if (window.scrollY > 600) {
+    toTopBtn.classList.add("show");
+  } else {
+    toTopBtn.classList.remove("show");
+  }
+});
+
+if (toTopBtn) {
+  toTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
