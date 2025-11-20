@@ -56,3 +56,28 @@ if (toTopBtn) {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 }
+// ===== One-Time Hero → Projects Scroll Snap =====
+function isInHero() {
+  return window.scrollY < window.innerHeight * 0.4;
+}
+
+function isInProjects() {
+  return window.scrollY >= window.innerHeight * 0.4 &&
+         window.scrollY < window.innerHeight * 1.6;
+}
+
+window.addEventListener("wheel", (e) => {
+  // Lefelé scroll + Hero → Projects ugrás
+  if (e.deltaY > 0 && isInHero()) {
+    document.querySelector("#projects").scrollIntoView({
+      behavior: "smooth"
+    });
+  }
+
+  // Felfelé scroll + Projects → Hero ugrás
+  if (e.deltaY < 0 && isInProjects()) {
+    document.querySelector("#hero").scrollIntoView({
+      behavior: "smooth"
+    });
+  }
+});

@@ -14,7 +14,7 @@ html, body {
 
 body {
   background:
-    radial-gradient(circle at 50% 50%, rgba(0,234,255,0.18), transparent 60%),
+    radial-gradient(circle at 50% 50%, rgba(255,50,88,0.18), transparent 60%),
     #050506;
   background-attachment: fixed;
   background-size: cover;
@@ -30,8 +30,8 @@ body {
   position: fixed;
   inset: 0;
   background-image:
-    linear-gradient(90deg, rgba(0,234,255,0.12) 1px, transparent 1px),
-    linear-gradient(rgba(0,234,255,0.12) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(255,50,88,0.12) 1px, transparent 1px),
+    linear-gradient(rgba(255,50,88,0.12) 1px, transparent 1px);
   background-size: 32px 32px;
   opacity: 0.21;
   pointer-events: none;
@@ -46,7 +46,7 @@ body {
   height: 70px;
   background: rgba(3,3,4,0.82);
   backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(0,234,255,0.15);
+  border-bottom: 1px solid rgba(255,50,88,0.15);
   z-index: 40;
 }
 
@@ -83,7 +83,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #00eaff;
+  color: #ff3258;
 }
 
 .nav-links a::after {
@@ -93,7 +93,7 @@ body {
   bottom: -0.2rem;
   width: 0;
   height: 2px;
-  background: #00eaff;
+  background: #ff3258;
   transition: width 0.2s ease;
 }
 
@@ -102,7 +102,7 @@ body {
 }
 
 .resume-btn {
-  border: 1px solid #00eaff;
+  border: 1px solid #ff3258;
   padding: 0.3rem 0.8rem;
   border-radius: 999px;
   position: relative;
@@ -116,7 +116,7 @@ body {
   position: absolute;
   inset: 0;
   width: 0%;
-  background: #00eaff;
+  background: #ff3258;
   z-index: -1;
   transition: width 0.35s ease;
 }
@@ -126,7 +126,7 @@ body {
 }
 
 .resume-btn:hover {
-  color: #050506 !important;
+  color: #050506!important;
 }
 
 
@@ -181,11 +181,11 @@ section {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url("images/mountain_dark2.jpg");  /* <-- IDE A TE KÉPED!! */
+  background-image: url("images/mountain_dark.png");  /* <-- IDE A TE KÉPED!! */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.45; /* Ha világos → tedd 0.55-re */
+  opacity: 0.40; /* Ha világos → tedd 0.55-re */
   z-index: -2;
 }
 
@@ -210,7 +210,7 @@ section {
 }
 
 .accent {
-  color: #00eaff;
+  color: #ff3258;
   font-weight: 600;
 }
 
@@ -237,13 +237,13 @@ section {
 }
 
 .cta-btn {
-  border: 2px solid #00eaff;
-  color: #00eaff;
+  border: 2px solid #ff3258;
+  color: #ff3258;
   background: transparent;
 }
 
 .cta-btn:hover {
-  background: #00eaff;
+  background: #ff3258;
   color: #050506;
 }
 
@@ -268,7 +268,7 @@ section {
   position: absolute;
   inset: 0;
   width: 0%;
-  background: #00eaff;
+  background: #ff3258;
   z-index: -1;
   transition: width 0.35s ease;
 }
@@ -319,8 +319,8 @@ section {
   width: 220px;
   height: 220px;
   border-radius: 50%;
-  border: 5px solid #00eaff;
-  box-shadow: 0 0 30px rgba(0,234,255,0.6);
+  border: 5px solid #ff3258;
+  box-shadow: 0 0 30px rgba(255,50,88,0.6);
   object-fit: cover;
 }
 
@@ -389,16 +389,16 @@ section {
   top: 0;
   bottom: 0;
   width: 3px;
-  background: #00eaff;
+  background: #ff3258;
   transform: translateX(-50%);
 }
 
 .timeline-item {
   width: 48%;
   padding: 1.1rem 1.4rem;
-  background: rgba(1, 106, 116, 0.2);
+  background: rgba(255,255,255,0.03);
   border-radius: 12px;
-  border: 1px solid rgba(0,234,255,0.2);
+  border: 1px solid rgba(255,50,88,0.2);
   margin-bottom: 2.6rem;
   position: relative;
 }
@@ -426,8 +426,8 @@ section {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: #00eaff;
-  box-shadow: 0 0 16px rgba(64,50,255,0.9);
+  background: #ff3258;
+  box-shadow: 0 0 16px rgba(255,50,88,0.9);
   position: absolute;
   left: calc(50% - 8px);
 }
@@ -454,9 +454,9 @@ section {
 }
 
 .tech-card {
-  background: rgba(1, 106, 116, 0.2);
+  background: rgba(255,255,255,0.04);
   border-radius: 12px;
-  border: 1px solid rgba(0,234,255,0.25);
+  border: 1px solid rgba(255,50,88,0.25);
   padding: 1.2rem;
   width: 130px;
   height: 110px;
@@ -478,8 +478,8 @@ section {
 
 .tech-card:hover {
   transform: translateY(-5px);
-  background: rgba(0,234,255,0.18);
-  box-shadow: 0 0 18px rgba(0,234,255,0.4);
+  background: rgba(255,50,88,0.18);
+  box-shadow: 0 0 18px rgba(255,50,88,0.4);
 }
 
 /* Tooltip on hover */
@@ -489,7 +489,7 @@ section {
   bottom: -42px;
   left: 50%;
   transform: translateX(-50%);
-  background: #00eaff;
+  background: #ff3258;
   color: #050506;
   padding: 0.35rem 0.7rem;
   border-radius: 999px;
@@ -514,10 +514,9 @@ section {
 }
 
 .hobby-card {
-  background: rgba(1, 106, 116, 0.2);
+  background: rgba(255,255,255,0.04);
   border-radius: 10px;
-  border: 1px solid rgba(0,234,255,0.22);
-
+  border: 1px solid rgba(255,50,88,0.22);
   padding: 0.9rem 1rem;
   font-size: 0.95rem;
   text-align: center;
@@ -526,7 +525,7 @@ section {
 
 .hobby-card:hover {
   transform: translateY(-4px);
-  background: rgba(0,234,255,0.16);
+  background: rgba(255,50,88,0.16);
 }
 
 /* Projects */
@@ -550,18 +549,18 @@ section {
 }
 
 .project-card {
-  background: rgba(1, 106, 116, 0.2);
+  background: rgba(255,255,255,0.04);
   border-radius: 12px;
-  border: 1px solid rgba(0,234,255,0.2);
+  border: 1px solid rgba(255,50,88,0.2);
   padding: 1.1rem;
   transition: 0.25s ease;
-  box-shadow: 0 0 14px rgba(0,234,255,0.15);
+  box-shadow: 0 0 14px rgba(255,50,88,0.15);
 }
 
 .project-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 24px rgba(0,234,255,0.4);
-  border-color: #00eaff;
+  box-shadow: 0 0 24px rgba(255,50,88,0.4);
+  border-color: #ff3258;
 }
 
 .project-thumb img {
@@ -596,8 +595,8 @@ section {
   display: inline-block;
   padding: 0.6rem 1.2rem;
   border-radius: 999px;
-  border: 1px solid #00eaff;
-  color: #00eaff;
+  border: 1px solid #ff3258;
+  color: #ff3258;
   text-decoration: none;
   font-size: 0.88rem;
   transition: 0.25s ease;
@@ -614,15 +613,14 @@ section {
   max-width: 200px;
   border-radius: 14px;
   overflow: hidden;
-  border: 2px solid rgba(0,234,255,0.45);
-  box-shadow: 0 0 32px rgba(0,234,255,0.35);
-  
+  border: 2px solid rgba(255,50,88,0.45);
+  box-shadow: 0 0 32px rgba(255,50,88,0.35);
   transition: 0.3s ease;
 }
 
 .project-gif:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 48px rgba(0,234,255,0.65);
+  box-shadow: 0 0 48px rgba(255,50,88,0.65);
 }
 
 /* GIF újraindítás hoverkor */
@@ -661,8 +659,8 @@ section {
   display: inline-block;
   padding: 0.7rem 1.4rem;
   border-radius: 999px;
-  border: 2px solid #00eaff;
-  color: #00eaff;
+  border: 2px solid #ff3258;
+  color: #ff3258;
   text-decoration: none;
   font-size: 0.95rem;
   transition: 0.25s ease;
@@ -711,14 +709,14 @@ section {
   height: 52px;
   border-radius: 50%;
   border: none;
-  background: #00eaff;
+  background: #ff3258;
   color: #050506;
   font-size: 1.7rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 18px rgba(0,234,255,0.5);
+  box-shadow: 0 0 18px rgba(255,50,88,0.5);
   transition: 0.25s ease;
   opacity: 0;
   pointer-events: none;
@@ -732,7 +730,7 @@ section {
 
 .to-top-btn:hover {
   transform: translateY(-4px);
-  box-shadow: 0 0 28px rgba(0,234,255,0.7);
+  box-shadow: 0 0 28px rgba(255,50,88,0.8);
 }
 
 /* Scroll reveal */
@@ -813,6 +811,6 @@ section {
   width: 50%;
   height: 2px;
   margin: 2.5rem auto; /* távolság az elemek között */
-  background: linear-gradient( to right, transparent, #00eaff, transparent);
+  background: linear-gradient( to right, transparent, #ff3258, transparent);
   opacity: 0.6;
 }
